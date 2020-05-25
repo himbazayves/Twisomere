@@ -375,6 +375,11 @@ if(isset($_SESSION['parent_student_twis_data_2020']) == false){
             include("profile.php");
         }
 
+         elseif(isset($_GET['add_favorite']))
+        {           
+            include("create_favorite.php");
+        }
+
          elseif(isset($_GET['']))
         {           
             include("");

@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<?php
+include "config/connection.php";
+?>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -7,7 +11,7 @@
     <meta name="author" content="Prince NP">
     <meta name="keywords" content="East Africa Hotel">
   <!-- Title -->
-    <title>Twisomere</title>
+    <title>Twisomere :: Parent</title>
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/icon/logo.jpg">
@@ -34,43 +38,60 @@
 
     <!-- Main CSS-->
     <link href="assets/css/theme.css" rel="stylesheet" media="all">
+
 </head>
 
-<body class="animsition">
-    <div class="page-wrapper">
-        <div class="page-content--bge5">
+<body class="animsition" style="overflow:auto;" bgcolor="red">
+    <div class="page-content--bge5">
+        <div class="page-content">
             <div class="container">
                 <div class="login-wrap">
-                    <div class="login-content" style="padding-left: 10px;padding-right: 9px;">
+                    <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="assets/images/icon/logo.jpg" alt="Twisomere">
+                                <img src="assets/images/icon/test.png" alt="Twisomere" style="width: 70%;">
                             </a>
                         </div>
+                        <div id="new_client_message">
+                        </div>
                         <div class="login-form">
+                            <form action="#/" onsubmit="new_parent();return false;" method="post">
+                                
+        
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input class="au-input au-input--full" type="text" id="username" name="username" placeholder="Your UserName" required autofocus >
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input class="au-input au-input--full" type="text" id="email" name="email" placeholder="Your Email" required autofocus >
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input class="au-input au-input--full" type="password" id="password" name="password" placeholder="Password" required autofocus  >
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password</label>
+                                    <input class="au-input au-input--full" type="password" id="confirm_password" name="password" placeholder="Password" required autofocus onkeyup='check();'>
+                                    <span id='message'></span>
+
+
+                                </div>
+                                <div class="login-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="aggree">Agree the terms and policy
+                                    </label>
+                                </div>
+                                <span id='reg_button'></span>
+                            </form>
                             <div class="register-link">
                                 <p>
-                                    Register As
+                                    Do you have account?
+                                    <a href="login.php">Sign In</a>
                                 </p>
-                            </div>
-                                <center>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <a href="school.php">
-                                                <button class="au-btn au-btn--block au-btn--blue m-b-20">School Registration</button>
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <a href="parent.php">
-                                                <button class="au-btn au-btn--block au-btn--blue2 m-b-20">Parent Registration</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </center>
-                            <div class="register-link">
                                 <p>
-                                    You already have an account?
-                                    <a href="login.php">Sign in Here</a>
+                                    Go Back
+                                    <a href="../index.php">Home</a>
                                 </p>
                             </div>
                         </div>
@@ -80,8 +101,22 @@
         </div>
 
     </div>
+    <script>
+        var check = function() {
+          if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'Password Match';
+            document.getElementById('reg_button').innerHTML = '<button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>';
 
-     <!-- Jquery JS-->
+          } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'Password is Not Matching';
+          }
+        }
+    </script>
+
+    <!-- Jquery JS-->
     <script src="assets/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="assets/vendor/bootstrap-4.1/popper.min.js"></script>

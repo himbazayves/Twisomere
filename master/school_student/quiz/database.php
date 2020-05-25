@@ -7,7 +7,7 @@
 
 //Create connection credentials
 $db_host = 'localhost';
-$db_name = 'quizzer';
+$db_name = 'twisomere';
 $db_user = 'root';
 $db_pass = '';
 
@@ -21,4 +21,5 @@ if($mysqli->connect_error){
 }
 
 
-?>
+?> 
+	

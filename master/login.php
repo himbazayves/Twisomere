@@ -47,7 +47,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="assets/images/icon/logo.png" alt="Twisomere">
+                                <img src="assets/images/icon/test.png" alt="Twisomere" style="width: 70%;">
                             </a>
                         </div>
                         <div id="Message1">
@@ -55,23 +55,28 @@
                         <div class="login-form">
                             <form action="#/" onsubmit="login1();return false;" method="post">
                                 <div class="form-group">
-                                    <label>Username</label>
+                                    <label>Izina</label>
                                     <input class="au-input au-input--full" type="text" name="username1" id="username1" placeholder="Username" required autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
+                                    <label>Ijambobanga</label>
                                     <input class="au-input au-input--full" type="password" name="password1" id="password1" placeholder="Password" required>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Remember Me
+                                        <input type="checkbox" name="remember">Nyibuka
                                     </label>
                                     <label>
-                                        <a href="forget-pass.php">Forgotten Password?</a>
+                                        <a href="forgot_password.php">Wibagiwe Ijambobanga?</a>
                                     </label>
                                 </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Injira</button>
                             </form>
+                            <div class="register-link">
+                                <p>
+                                    <a href="../index.php">Ahabanza</a>
+                                </p>
+                            </div>
                           
                         </div>
                     </div>

@@ -7,7 +7,7 @@
                       <div class="row" id="loader_general_admin1">
                             <div class="col-md-12">
                                 <!-- DATA TABLE -->
-                                <h3 class="title-5 m-b-35">Books List</h3>
+                                <h3 class="title-5 m-b-35">Books List For Quiz</h3>
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2" id="Table1">
                                         <thead>
@@ -50,17 +50,15 @@
                                                 <td><?php echo $b_level ?></td>
                                                 <td>
                                                     <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="View Book" onclick="view_book('<?php echo $id1 ?>');">
-                                                            <i class="zmdi zmdi-eye"></i>
-                                                        </button>
+                                                        
+                                                        <form action="index.php?new_quiz" method="post">
+                                                            <input style="display: none;" type="text" name="b_id" id="b_id" value="<?php echo $row5['book_id'];?>">
 
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit Book" onclick="update_book('<?php echo $id1 ?>');">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete Book" onclick="delete_book_data('<?php echo $id1 ?>');" >
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
+                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Add Quiz" type="submit">
+                                                                <i class="zmdi zmdi-plus"></i>
+                                                            </button>
+                                                        </form>
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
@@ -73,22 +71,4 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-
-                                                 function readURL(input) {
-                                            if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
-
-                                                reader.onload = function (e) {
-                                                    $('#blah')
-                                                        .attr('src', e.target.result)
-                                                        .width(250)
-                                                        .height(300);
-                                                };
-
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                                }
-                                            
-                                        </script>
                                         

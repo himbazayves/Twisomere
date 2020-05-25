@@ -379,9 +379,9 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
             include("complete_profile_update_data.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['add_favorite']))
         {           
-            include("");
+            include("create_favorite.php");
         }
 
          elseif(isset($_GET['']))

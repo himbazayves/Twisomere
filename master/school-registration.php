@@ -49,7 +49,7 @@ include "config/connection.php";
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="assets/images/icon/logo.png" alt="Twisomere">
+                                <img src="assets/images/icon/test.png" alt="Twisomere" style="width: 70%;">
                             </a>
                         </div>
                         <div id="new_client_message">
@@ -91,7 +91,7 @@ include "config/connection.php";
                                 </p>
                                 <p>
                                     Go Back
-                                    <a href="index.php">Home</a>
+                                    <a href="../index.php">Home</a>
                                 </p>
                             </div>
                         </div>

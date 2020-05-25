@@ -93,7 +93,7 @@
                 <div class="header3-wrap">
                     <div class="header__logo">
                         <a href="#">
-                            <img src="../assets/images/icon/logo" alt="Twisomere" />
+                            <img src="../assets/images/icon/logo_white" alt="Twisomere" style="width: 23%;display: inline-block;" />
                         </a>
                     </div>
                     <div class="header__navbar">
@@ -153,7 +153,7 @@
                                     <span class="bot-line"></span>Quiz</a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="login.html">New Quiz</a>
+                                        <a href="index.php?add_quiz">New Quiz</a>
                                     </li>
                                     <li>
                                         <a href="register.html">Manage Quiz</a>
@@ -310,7 +310,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo-white.png" alt="Twisomere" />
+                            <img src="../assets/images/icon/logo_white.png" alt="Twisomere" style="width: 50%;"  />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -377,7 +377,7 @@
                                     <span class="bot-line"></span>Quiz</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="login.html">New Quiz</a>
+                                    <a href="index.php?add_quiz">New Quiz</a>
                                 </li>
                                 <li>
                                     <a href="register.html">Manage Quiz</a>
@@ -606,6 +606,16 @@
                          elseif(isset($_GET['profile']))
                         {           
                             include("profile.php");
+                        }
+
+                         elseif(isset($_GET['new_quiz']))
+                        {           
+                            include("new_quiz.php");
+                        }
+
+                         elseif(isset($_GET['add_quiz']))
+                        {           
+                            include("create_quiz.php");
                         }
 
                          elseif(isset($_GET['']))

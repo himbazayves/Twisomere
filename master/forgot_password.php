@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-include "config/connection.php";
-?>
+
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -11,7 +9,7 @@ include "config/connection.php";
     <meta name="author" content="Prince NP">
     <meta name="keywords" content="East Africa Hotel">
   <!-- Title -->
-    <title>Twisomere :: Parent</title>
+    <title>Twisomere :: Forgot Password</title>
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/icon/logo.jpg">
@@ -19,7 +17,7 @@ include "config/connection.php";
     <link rel="shortcut icon" href="assets/images/logo.jpg"> 
 
     <!-- Fontfaces CSS-->
-    <link href="assets/css/font-face.css" rel="stylesheet" media="all">
+    <link href="img/favicon.png" rel="stylesheet" media="all">
     <link href="assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -41,7 +39,7 @@ include "config/connection.php";
 
 </head>
 
-<body class="animsition" style="overflow:auto;" bgcolor="red">
+<body class="animsition" style="overflow:auto;" >
     <div class="page-content--bge5">
         <div class="page-content">
             <div class="container">
@@ -49,40 +47,19 @@ include "config/connection.php";
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="assets/images/icon/logo.png" alt="Twisomere">
+                                <img src="assets/images/icon/test.png" alt="Twisomere" style="width: 70%;">
                             </a>
                         </div>
-                        <div id="new_client_message">
+                        <div id="Message1">
                         </div>
                         <div class="login-form">
-                            <form action="#/" onsubmit="new_parent();return false;" method="post">
-                                
-        
+                            <form action="#/" onsubmit="login1();return false;" method="post">
                                 <div class="form-group">
-                                    <label>Username</label>
-                                    <input class="au-input au-input--full" type="text" id="username" name="username" placeholder="Your UserName" required autofocus >
-                                </div>
-                                <div class="form-group">
+                                    <p style="text-align: center;color: black;">Enter The E-mail You used To Register</p>
                                     <label>E-mail</label>
-                                    <input class="au-input au-input--full" type="text" id="email" name="email" placeholder="Your Email" required autofocus >
+                                    <input class="au-input au-input--full" type="email" name="mail" id="mail" placeholder="Enter Your E-mail" required autofocus>
                                 </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" id="password" name="password" placeholder="Password" required autofocus  >
-                                </div>
-                                <div class="form-group">
-                                    <label>Confirm Password</label>
-                                    <input class="au-input au-input--full" type="password" id="confirm_password" name="password" placeholder="Password" required autofocus onkeyup='check();'>
-                                    <span id='message'></span>
-
-
-                                </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="aggree">Agree the terms and policy
-                                    </label>
-                                </div>
-                                <span id='reg_button'></span>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Reset Password</button>
                             </form>
                             <div class="register-link">
                                 <p>
@@ -91,7 +68,7 @@ include "config/connection.php";
                                 </p>
                                 <p>
                                     Go Back
-                                    <a href="index.php">Home</a>
+                                    <a href="../index.php">Home</a>
                                 </p>
                             </div>
                         </div>
@@ -101,20 +78,6 @@ include "config/connection.php";
         </div>
 
     </div>
-    <script>
-        var check = function() {
-          if (document.getElementById('password').value ==
-            document.getElementById('confirm_password').value) {
-            document.getElementById('message').style.color = 'green';
-            document.getElementById('message').innerHTML = 'Password Match';
-            document.getElementById('reg_button').innerHTML = '<button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>';
-
-          } else {
-            document.getElementById('message').style.color = 'red';
-            document.getElementById('message').innerHTML = 'Password is Not Matching';
-          }
-        }
-    </script>
 
     <!-- Jquery JS-->
     <script src="assets/vendor/jquery-3.2.1.min.js"></script>

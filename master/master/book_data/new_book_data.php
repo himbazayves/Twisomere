@@ -69,8 +69,8 @@ else
 
     //$query=mysqli_query($conn,"select * from leader where position='$leader_position' ") or die("selecting error");
     $query=mysqli_query($conn,"SELECT book_name from book where book_name='$b_name'");
-    $a=3;
-    if($a == 1){
+    
+    if($query->num_rows == 1){
     ?>
     <div style="width: 100%;float: left;padding: 10px;">
         <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show" >

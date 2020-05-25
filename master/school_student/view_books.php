@@ -50,6 +50,18 @@
                                                     <td><?php echo $b_name ?></td>
                                                     <td><?php echo $b_descr ?></td>
                                                     <td>
+                                                        <form action="index.php?add_favorite" method="post">
+                                                           <div class="table-data-feature">
+                                                                <input type="hidden" name="b_id" id="b_id" value="<?php echo $b_id ?>">
+
+                                                                <input type="hidden" name="s_id" id="s_id" value="<?php echo $s_id ?>">
+
+                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Add To Favorite" onclick="delete_book_data('<?php echo $id1 ?>');" >
+                                                                    <i class="zmdi zmdi-favorite"></i>
+                                                                </button>
+                                                                
+                                                            </div> 
+                                                        </form>
                                                         <form action="index.php?read_book_content" method="post">
                                                            <div class="table-data-feature">
                                                                 <input style="display: none;" type="text" name="b_id" id="b_id" value="<?php echo $b_id ?>">
@@ -60,7 +72,6 @@
                                                                 
                                                             </div> 
                                                         </form>
-                                                        
                                                     </td>
                                                 </tr>
                                                 <tr class="spacer"></tr>

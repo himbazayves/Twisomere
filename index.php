@@ -15,8 +15,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="master/assets/images/icon/logo.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="master/assets/images/icon/logo.jpg">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -54,7 +54,7 @@
         
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-		<img style="width:170px" class="img-fluid" src="images/l.png" alt="" />
+		<img style="width:170px" class="img-fluid" src="master/assets/images/icon/test.png" alt="" />
 		</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -80,7 +80,7 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Tuvugishe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="login.php">Injira</a>
+                <a class="nav-link js-scroll-trigger" href="master/login.php">Injira</a>
               </li>
 
               <li class="nav-item">
@@ -101,7 +101,11 @@
 							<div class="row">
 								<div class="col-md-8 col-lg-8 slider-inner">
 									<h1 class="big animated">Twisomere</h1>
-									<p class="animated">Dufite ibitabo byiza kandi bijyanye n'imyaka y'umwana wawe</p>
+									<p class="animated">
+                                        
+                                        Twifuza kubona buri mwana wese agera ku nzozi ze. Uruhare rwacu ni ukumuha inkuru zimwereka ko ashoboye, zimuremamo icyizere, ndetse ziryoshye.
+
+                                    </p>
 									<a data-toggle="modal" data-target="#myModal" class="btn-new from-middle animated" href="#">Iyandikishe</a>
 								</div>
 							</div>
@@ -117,7 +121,11 @@
 							<div class="row">
 								<div class="col-md-8 col-lg-8 slider-inner">
 									<h1 class="big animated">Twisomere</h1>
-									<p class="animated">Dufite ibitabo byiza kandi bijyanye n'imyaka y'umwana wawe</p>
+									<p class="animated">
+
+                                        Twifuza kubona buri mwana wese agera ku nzozi ze. Uruhare rwacu ni ukumuha inkuru zimwereka ko ashoboye, zimuremamo icyizere, ndetse ziryoshye.
+
+                                    </p>
 									<a data-toggle="modal" data-target="#myModal" class="btn-new from-middle animated" href="#">Iyandikishe</a>
 								</div>
 							</div>
@@ -133,7 +141,11 @@
 							<div class="row">
 								<div class="col-md-8 col-lg-8 slider-inner">
 									<h1 class="big animated">Twisomere</h1>
-									<p class="animated">Our library is simple and easy to use and affordable</p>
+									<p class="animated">
+                                        
+                                        Twifuza kubona buri mwana wese agera ku nzozi ze. Uruhare rwacu ni ukumuha inkuru zimwereka ko ashoboye, zimuremamo icyizere, ndetse ziryoshye.
+
+                                    </p>
 									<a data-toggle="modal" data-target="#myModal" class="btn-new from-middle animated" href="#">Get involved</a>
 								</div>
 							</div>
@@ -145,18 +157,18 @@
 		</div><!-- .ct-slick-homepage -->
 	</div><!-- .ct-header --> 
 
-    <div id="about" class="section wb">
+    <div id="about" class="section wb" style="padding-bottom: 10px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="message-box">                        
-                        <h2>About Twisomere (TWIS).</h2>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
-						<p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h2>TWIS </h2>
+                        <p style="font-size: 25px;color: black;"> 
+                            Intego nyamukuru yacu ni ukugeza inkuru nziza, zijyanye n’imyaka ndetse zishingiye ku muco ku bana mu rwego rwo kubafasha mu rugendo rwabo rwo kwiga.
+                        </p>
 						
 						<ul>
-							<li><b>Follow Me</b></li>
+							<li><b>Dukurikirane</b></li>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -164,8 +176,8 @@
 							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
 						</ul>
-
-						<a class="btn-new from-middle animated" href="#">Get involved</a>
+<!-- 
+						<a class="btn-new from-middle animated" href="#">Get involved</a> -->
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
@@ -177,73 +189,100 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+
+    <div id="about" class="section wb" style="padding: 10px 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">                       
+                        <h1 style="text-align: center;">
+                            " Twifuza kubona buri mwana wese agera ku nzozi ze. Uruhare rwacu ni ukumuha inkuru zimwereka ko ashoboye, zimuremamo icyizere, ndetse ziryoshye. "
+                        </h1>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
 	
     <div id="pricing" class="section lb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Pricing</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+                <h3>Ibiciro</h3>
+                <!-- <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p> -->
             </div><!-- end title -->
 
             <div class="row">
-
+                
+                <!-- FIRST ONE  -->
 				<a  href="#" class="col-md-4">
+                    <div style="width: 100% ; background-color: #007bff;text-align: center;padding: 5px;padding-top: 15px;">
+                        <h2 style="font-weight: bold;">PREMIUM</h2>
+                    </div>
 				
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea-1"></i>
-						</div>
-						<h2>Graphic Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<p style="font-size: 35px;">
+                            <span>Rwf</span>
+                            <b style="font-size: 45px;font-weight: bold;">700</b>
+                        </p>
+                        <p style="font-size: 20px;">
+                            Inkuru enye (4) 
+                            <br>
+                            mu kwezi
+
+                        </p>
+                        <div style="width: 100% ; background-color: #007bff;text-align: center;">
+                            KUGURA
+                        </div>
 					</div>
-			
-			</a>
-				<!-- end col -->
-				<a href="#" class="col-md-4">
+                </a>
+                <!-- END OF ONE -->
+
+                <!-- SECOND  -->
+                <a  href="#" class="col-md-4">
+                    <div style="width: 100% ; background-color: #faad3b;text-align: center;padding: 5px;padding-top: 15px;">
+                        <h2 style="font-weight: bold;">PRO</h2>
+                    </div>
+                
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
-						</div>
-						<h2>Support</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </a><!-- end col -->
-				<a href="#" class="col-md-4">
+                        <p style="font-size: 35px;">
+                            <span>Rwf</span>
+                            <b style="font-size: 45px;font-weight: bold;">1200</b>
+                        </p>
+                        <p style="font-size: 20px;">
+                            Inkuru enye (8) 
+                            <br>
+                            mu kwezi
+
+                        </p>
+                        <div style="width: 100% ; background-color: #faad3b;text-align: center;">
+                            KUGURA
+                        </div>
+                    </div>
+                </a>
+                <!-- END OF SECOND -->
+
+                <!-- THIRD ONE  -->
+                <a  href="#" class="col-md-4">
+                    <div style="width: 100% ; background-color: #000;text-align: center;padding: 5px;padding-top: 15px;">
+                        <h2 style="font-weight: bold;color: white;">PRO+</h2>
+                    </div>
+                
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea"></i>
-						</div>
-						<h2>Web Idea</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </a><!-- end col -->
-				<a href="#" class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div>
-						<h2>Web Development</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </a><!-- end col -->
-                <a href="#" class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-development"></i>
-						</div>
-						<h2>Responsive Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </a><!-- end col -->
-				<a href="#" class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-process"></i>
-						</div>
-						<h2>Creative Design</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-                </a><!-- end col -->
+                        <p style="font-size: 35px;">
+                            <span>Rwf</span>
+                            <b style="font-size: 45px;font-weight: bold;">1500</b>
+                        </p>
+                        <p style="font-size: 20px;">
+                            Inkuru enye (10) 
+                            <br>
+                            mu kwezi
+
+                        </p>
+                        <div style="width: 100% ; background-color: #000;text-align: center;;color: white;">
+                            KUGURA
+                        </div>
+                    </div>
+                </a>
+                <!-- END OF THIRD-->
+
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
@@ -252,7 +291,7 @@
 	 <div id="testimonials" class="section wb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Testimonials</h3>
+                <h3>Ubuhamya</h3>
                 <p>We thanks for all our awesome testimonials! There are hundreds of our happy customers! </p>
             </div><!-- end title -->
 
@@ -350,8 +389,8 @@
     <div  id="contact" class="section db">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Contact Us</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+                <h3>Tuvugishe</h3>
+                <p>Ukeneye ubufasha cyangwa igitekerezo watwandikira hano</p>
             </div><!-- end title -->
 
             <div class="row">
@@ -362,28 +401,28 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name.">
+										<input class="form-control" id="name" type="text" placeholder="Amazina Yawe" required="required" data-validation-required-message="Amazina Yawe">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email address.">
+										<input class="form-control" id="email" type="email" placeholder="E-mail Yawe" required="required" data-validation-required-message="E-mail Yawe.">
 										<p class="help-block text-danger"></p>
 									</div>
 									<div class="form-group">
-										<input class="form-control" id="phone" type="tel" placeholder="Your Phone" required="required" data-validation-required-message="Please enter your phone number.">
+										<input class="form-control" id="phone" type="tel" placeholder="Telefoni Yawe" required="required" data-validation-required-message="Telefoni Yawe.">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+										<textarea class="form-control" id="message" placeholder="Ubutumwa cyangwa igitekerezo" required="required" data-validation-required-message="Ubutumwa cyangwa igitekerezo"></textarea>
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success"></div>
-									<button id="sendMessageButton" class="sim-btn btn-new from-middle animated" data-text="Send Message" type="submit">Send Message</button>
+									<button id="sendMessageButton" class="sim-btn btn-new from-middle animated" data-text="Send Message" type="submit">Ohereza</button>
 								</div>
 							</div>
 						</form>
@@ -404,9 +443,9 @@
             
             </div>
             <div class="modal-body">
-                <h2 >Iyandikishe nka</h2>
+                <h2 >Iyandikishe </h2>
 
-              <a class="btn-new from-middle animated" href="school-registration.php">Ikigo</a> Cg  <a class="btn-new from-middle animated" href="parent-registration.php">Umubyeyi</a>
+              <a class="btn-new from-middle animated" href="master/school-registration.php">Ikigo</a> &nbsp; <a class="btn-new from-middle animated" href="master/parent-registration.php">Umubyeyi</a>
             </div>
            
           </div>

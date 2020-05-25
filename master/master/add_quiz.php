@@ -2,15 +2,9 @@
 
 
 <?php 
-include "database.php";
+include "../../config/connection.php";
    //Get Post variables
    //$question_number = $_POST['question_number']; 
-
-   
-
-include "database.php"; 
-//get total questions
-//$query = "select * from questions";
 
 $query = "select * from questions order by question_number desc limit 1";
 
@@ -29,7 +23,7 @@ $next=$total+1;
 
 
 
-   $book_id = $_POST['book_id'];  
+   $book_id = 16;  
         
    $question_text = $_POST['question_text'];
    $correct_choice = $_POST['correct_choice'];
@@ -68,7 +62,7 @@ $next=$total+1;
 }
 else {
 
-    echo "<div class='alert alert-warning'> Dinied</div>";
+    echo "<div class='alert alert-warning'> Denied</div>";
 }
 
 

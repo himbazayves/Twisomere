@@ -126,7 +126,7 @@
                                                 <tbody>
                                                     <?php
 
-                                                    $sql3="SELECT * from book where level_id='$s_level' LIMIT 4 ";
+                                                    $sql3="SELECT * from book,favorite where book.level_id='$s_level' AND book.book_id=favorite.book_id AND favorite.student_id='$s_id' LIMIT 4 ";
                                                     $result3=$conn->query($sql3);
 
                                                     while ($row3 = $result3->fetch_assoc()) {

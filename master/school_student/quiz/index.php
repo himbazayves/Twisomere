@@ -72,6 +72,7 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
 
                                 while ($row1 = $result1->fetch_assoc()) {
                                 $s_id=$row1['student_id'];
+                               
                                 $s_username=$row1['student_username'];
                                 $s_Fname=$row1['student_Fname'];
                                 $s_Lname=$row1['student_Lname'];
@@ -89,6 +90,12 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
 
                                     $sub_plan=$row2['sub_id'];
 
+                                    ?>
+                                    <?php 
+                                    
+                                $_SESSION['student_id']=$row1['student_id'];
+                                    
+                                    
                                     ?>
 <html lang="en">
 
@@ -139,7 +146,7 @@ else {
  }
                                                             
 ?>
-    <?php include "header.php" ?>
+ 
 
         
 
@@ -269,44 +276,77 @@ else {
 
 
 
+
+<?php
+
+$student_id=$_SESSION['student_id'];
+    $sql= "select * from quiz_result WHERE student_id=$student_id and book_id=$book_id";
+ 
+ $results = $mysqli->query($sql) or die ($mysqli->error.__LINE__);
+ 
+ $count=mysqli_num_rows($results);
+ $row = $results->fetch_assoc()
+
+ ?>
+
+ 
+<?php if ($count>0) :?>
+
+<div class="alert alert-warning" role="alert">
+    Munyeshuli wakoze ikizamini kuri iki gitabo  ,amanota wabonye ni <strong> <?php echo  $row['score'] ?> </strong>!
+     <a href="../index.php"> Kanda hano usubire inyuma</a>
+   </div>
+   <?php else:?>
+
       <div class="card">
-									<div class="card-header">
+
+  
+
+
+          
+
+            <div class="card-header">
                                       
-                                        <div class="alert alert-warning" role="alert">
-											Mbere yuko utangira banza usome neza amabwiriza!
-										</div>
-									</div>
-									<div class="card-body">
-										<div class="alert alert-success" role="alert">
-											<h4 class="alert-heading">Iri ni igereza ryoroshye ku gitabo umaze gusoma!</h4>
-											<p><div class="alert alert-light" role="alert">
-                                            <strong>Umubare w'ibibazo: </strong><?php echo $total; ?>
-                                        </div>
-                                    </p>
+                                      <div class="alert alert-warning" role="alert">
+                                          Mbere yuko utangira banza usome neza amabwiriza!
+                                      </div>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="alert alert-success" role="alert">
+                                          <h4 class="alert-heading">Iri ni igereza ryoroshye ku gitabo umaze gusoma!</h4>
+                                          <p><div class="alert alert-light" role="alert">
+                                          <strong>Umubare w'ibibazo: </strong><?php echo $total; ?>
+                                      </div>
+                                  </p>
 
 
-                                    <p><div class="alert alert-light" role="alert">
-                                    <strong>Ubwoko bw'ibibazo: </strong> Guhitamo
-                                        </div>
-                                    </p>
-                                            
-                                    <p><div class="alert alert-light" role="alert">
-                                    <strong>Igihe kigenwe : </strong><?php echo $total*0.5; ?> minutes
-                                        </div>
-                                    </p>
+                                  <p><div class="alert alert-light" role="alert">
+                                  <strong>Ubwoko bw'ibibazo: </strong> Guhitamo
+                                      </div>
+                                  </p>
+                                          
+                                  <p><div class="alert alert-light" role="alert">
+                                  <strong>Igihe kigenwe : </strong><?php echo $total*0.5; ?> minutes
+                                      </div>
+                                  </p>
 
-                                    <p><div class="alert alert-light" role="alert">
-                                    <strong>Inshuro wemerewe gukora: </strong>  3 (Igihe cyose wumva udashimishijwe na matona yawe ushobora gusubiramo inshuro ibyeri ariko ayanyuma niyo yandikwa )
-                                        </div>
-                                    </p>
-                                    
-                                    <hr>
-											<p class="mb-0"><a href="question.php?n=<?php echo $row['question_number'] ?>&book_id=<?php echo $book_id ?>"  class="btn btn-success">
-        <i class="fa fa-magic"></i>&nbsp; Tangira igerageza </a>
-    </p>
-										</div>
-                                        </div>
-                                        </div>
+                                  <p><div class="alert alert-light" role="alert">
+                                  <strong>Inshuro wemerewe gukora: </strong>  3 (Igihe cyose wumva udashimishijwe na matona yawe ushobora gusubiramo inshuro ibyeri ariko ayanyuma niyo yandikwa )
+                                      </div>
+                                  </p>
+                                  
+                                  <hr>
+                                          <p class="mb-0"><a href="question.php?n=<?php echo $row['question_number'] ?>&book_id=<?php echo $book_id ?>"  class="btn btn-success">
+      <i class="fa fa-magic"></i>&nbsp; Tangira igerageza </a>
+  </p>
+                                      </div>
+                                      </div>
+
+        <?php endif ?>
+
+								
+                                        
+        </div>
 
      
 

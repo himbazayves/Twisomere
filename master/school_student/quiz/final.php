@@ -6,6 +6,45 @@
 	$query="select * from shouts order by time desc limit 100";
   $shouts = mysqli_query($mysqli,$query);
  $trial=$_SESSION['trial'];
+ $student_id=$_SESSION['student_id'];
+ $score=$_SESSION['score'];
+
+
+
+ $sql= "select * from quiz_result WHERE student_id=$student_id and book_id=$book_id";
+ 
+ $results = $mysqli->query($sql) or die ($mysqli->error.__LINE__);
+ 
+ $count=mysqli_num_rows($results);
+ if($count<1){
+  
+
+
+    $query2 = "INSERT INTO quiz_result (book_id, student_id, score)
+VALUES ($book_id, $student_id, $score)";
+    //$query2="INSERT into  quiz_result SET score=$score WHERE student_id=$student_id and book_id=$book_id";
+
+ if(mysqli_query($mysqli, $query2)){
+    echo "Records were updated successfully.";
+} else {
+    echo "ERROR: Could not able to execute $query2. " . mysqli_error($mysqli);
+}
+
+ }
+
+ else{
+
+    $query2="UPDATE quiz_result SET score=$score WHERE student_id=$student_id and book_id=$book_id";
+
+    if(mysqli_query($mysqli, $query2)){
+       echo "Records were updated successfully.";
+   } else {
+       echo "ERROR: Could not able to execute $query2. " . mysqli_error($mysqli);
+   }
+ }
+
+
+ 
 
 $_SESSION['number']=1;
   
