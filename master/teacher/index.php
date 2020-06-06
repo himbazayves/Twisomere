@@ -345,7 +345,7 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
                         </li>  
 
                         <li class="has-sub">
-                            <a href="index.php">
+                            <a href="index.php?remarks">
                                 <i class="fas fa-file-text"></i>Remarks</a>
                         </li>
 
@@ -387,7 +387,7 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
                             </ul>
                         </li>
                         <li>
-                            <a href="index.php">
+                            <a href="index.php?remarks">
                                 <i class="fas fa-file-text"></i>Remarks</a>
                         </li>
                         <li>
@@ -571,14 +571,14 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
             include("settings.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['view_marks']))
         {           
-            include("");
+            include("view_student_marks.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['remarks']))
         {           
-            include("");
+            include("remarks.php");
         }
 
          elseif(isset($_GET['']))

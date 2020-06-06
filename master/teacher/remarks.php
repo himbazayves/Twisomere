@@ -7,7 +7,7 @@
                       <div class="row" id="loader_general_admin1">
                             <div class="col-md-12">
                                 <!-- DATA TABLE -->
-                                <h3 class="title-5 m-b-35">Student List</h3>
+                                <h3 class="title-5 m-b-35">My Student</h3>
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2" id="Table1">
                                         <thead>
@@ -17,8 +17,8 @@
                                                 <th>Student Username</th>
                                                 <th>Student Names</th>
                                                 <th>Student Gender</th>
-                                                <th>Student Level</th>
                                                 <th>Books</th>
+                                                <th>Remark</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -64,7 +64,6 @@
                                                 <td><?php echo $stu_user ?></td>
                                                 <td><?php echo $stu_fn; ?> <?php echo $stu_ln; ?></td>
                                                 <td><?php echo $stu_gender ?></td>
-                                                <td><?php echo $stu_level ?> Level</td>
                                                 <td><?php echo $total_books ?> Books</td>
                                                 <td>
                                                     <form action="index.php?view_marks" method="post">
@@ -72,6 +71,16 @@
                                                             <input style="display: none;" type="text" name="stu_id" id="stu_id" value="<?php echo $stu_id ?>">
                                                             <button class="item" data-toggle="tooltip" data-placement="top" title="View Details" >
                                                                 <i class="zmdi zmdi-eye"></i>
+                                                            </button>                                                         
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    <form action="index.php?send_remark" method="post">
+                                                        <div class="table-data-feature">
+                                                            <input style="display: none;" type="text" name="stu_id" id="stu_id" value="<?php echo $stu_id ?>">
+                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="Send Remark" >
+                                                                <i class="zmdi zmdi-mail-send"></i>
                                                             </button>                                                         
                                                         </div>
                                                     </form>
