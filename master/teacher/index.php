@@ -171,6 +171,8 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
                                                             } else {
                                                                 $fileName = "$profile_pic";
                                                             }
+
+                                                            $teach_picture = $fileName;
                                                             
                                                         ?>
                                            <img src="teacher_profile/<?php echo $fileName ?>" alt="<?php echo $t_username ?>" />
@@ -350,7 +352,7 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
                         </li>
 
                         <li class="has-sub">
-                            <a href="index.php">
+                            <a href="index.php?comment">
                                 <i class="fas fa-comments"></i>Comments</a>
                         </li>                
                         
@@ -391,7 +393,7 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
                                 <i class="fas fa-file-text"></i>Remarks</a>
                         </li>
                         <li>
-                            <a href="index.php">
+                            <a href="index.php?comment">
                                 <i class="fas fa-comments"></i>Comments</a>
                         </li>
                     </ul>
@@ -581,9 +583,9 @@ if(isset($_SESSION['teacher_twis_data_2020']) == false){
             include("remarks.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['comment']))
         {           
-            include("");
+            include("comments.php");
         }
 
          elseif(isset($_GET['']))

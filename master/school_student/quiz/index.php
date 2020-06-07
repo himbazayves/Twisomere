@@ -190,7 +190,7 @@ else {
                                             <i class="fas fa-file-text"></i>Test</a>
                                     </li>
                                     <li>
-                                        <a href="form.html">
+                                        <a href="index.php?remarks">
                                             <i class="fa fa-tasks"></i>Remarks</a>
                                     </li>
                                     </ul>
@@ -254,9 +254,9 @@ else {
             include("read_book.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['remarks']))
         {           
-            include("");
+            include("remarks.php");
         }
 
          elseif(isset($_GET['']))

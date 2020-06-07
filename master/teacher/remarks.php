@@ -76,7 +76,7 @@
                                                     </form>
                                                 </td>
                                                 <td>
-                                                    <form action="index.php?send_remark" method="post">
+                                                    <form action="index.php?comment" method="post">
                                                         <div class="table-data-feature">
                                                             <input style="display: none;" type="text" name="stu_id" id="stu_id" value="<?php echo $stu_id ?>">
                                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Send Remark" >

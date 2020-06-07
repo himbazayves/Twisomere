@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2020 at 04:28 PM
+-- Generation Time: Jun 07, 2020 at 12:27 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- PHP Version: 7.3.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -244,7 +244,8 @@ CREATE TABLE `favorite` (
 INSERT INTO `favorite` (`fav_id`, `student_id`, `book_id`, `time`) VALUES
 (1, '1', '13', '2020-05-24 14:37:55'),
 (2, '1', '14', '2020-05-24 14:38:00'),
-(4, '3', '13', '2020-05-24 14:46:05');
+(4, '3', '13', '2020-05-24 14:46:05'),
+(5, '1', '15', '2020-06-06 10:50:54');
 
 -- --------------------------------------------------------
 
@@ -267,6 +268,36 @@ INSERT INTO `level` (`level_id`, `level`) VALUES
 (4, '4'),
 (5, '5'),
 (6, '3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `message_id` int(11) NOT NULL,
+  `sender_id` text DEFAULT NULL,
+  `receiver_id` int(255) DEFAULT NULL,
+  `message_content` longtext DEFAULT NULL,
+  `message_file` longtext DEFAULT NULL,
+  `message_date` text DEFAULT NULL,
+  `message_status` text DEFAULT NULL,
+  `message_side` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`message_id`, `sender_id`, `receiver_id`, `message_content`, `message_file`, `message_date`, `message_status`, `message_side`) VALUES
+(1, '1', NULL, 'hello', NULL, '2020-06-07 10:10:53am', '0', 'student'),
+(2, '1', NULL, 'teacher i cant read it', NULL, '2020-06-07 10:15:23am', '0', 'student'),
+(3, '1', NULL, 'hoya', NULL, '2020-06-07 10:39:49am', '0', 'student'),
+(4, '1', NULL, 'nukuri', NULL, '2020-06-07 10:57:06am', '0', 'student'),
+(5, '1', NULL, 'what seems to be the problem King', NULL, '2020-06-07 11:13:17am', '0', 'teacher'),
+(6, '1', NULL, 'i dont have someone to help me', NULL, '2020-06-07 11:14:52am', '0', 'student'),
+(7, '1', NULL, 'try to read my son', NULL, '2020-06-07 12:27:00pm', '0', 'teacher');
 
 -- --------------------------------------------------------
 
@@ -401,6 +432,7 @@ CREATE TABLE `quiz_result` (
 --
 
 INSERT INTO `quiz_result` (`quiz_result_id`, `book_id`, `student_id`, `score`) VALUES
+(0, 14, 1, 1),
 (1, 13, 1, 1);
 
 -- --------------------------------------------------------
@@ -558,6 +590,12 @@ ALTER TABLE `level`
   ADD PRIMARY KEY (`level_id`);
 
 --
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`message_id`);
+
+--
 -- Indexes for table `parent`
 --
 ALTER TABLE `parent`
@@ -643,13 +681,19 @@ ALTER TABLE `choices`
 -- AUTO_INCREMENT for table `favorite`
 --
 ALTER TABLE `favorite`
-  MODIFY `fav_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `fav_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `level`
 --
 ALTER TABLE `level`
   MODIFY `level_id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `parent`
@@ -680,12 +724,6 @@ ALTER TABLE `quiz`
 --
 ALTER TABLE `quiz_questions`
   MODIFY `question_id` int(250) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `quiz_result`
---
-ALTER TABLE `quiz_result`
-  MODIFY `quiz_result_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `school`

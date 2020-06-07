@@ -690,6 +690,18 @@ function activate_parent(adminid){
     }, 500);
 }
 
+// View messages
+
+function read_messages(adminid){
+    $("#loader_agenda_data").fadeOut(500);  
+    setTimeout(function(){
+      var sender_id=Ben_way_to_get_element(adminid).innerHTML;
+      var send_data1=
+          "&sender_id="+sender_id;
+     ajax_changetab_and_send_data('teacher_data/view_message_content.php', 'loader_agenda_data_post', send_data1); 
+    }, 500);
+}
+
 
  // update plan details
 function update_plan_data(){
@@ -747,6 +759,30 @@ function update_book_data() {
 
           ajax1.onreadystatechange = function () {
             Ben_way_to_get_element('Message2').innerHTML = ajax1.responseText;
+
+      };
+}
+
+// message area
+
+// Teacher chat
+function send_admin_message() {
+          Ben_way_to_get_element('profile_complete_message').innerHTML = "<div class='alert alert-info' role='alert'><i class='fa fa-info-circle'></i> Sending Message to Admin . . . . . . </div>";
+
+          var formdata = new FormData();
+          var ajax1 = new XMLHttpRequest();
+
+          var user_id = Ben_way_to_get_element('user_id').value;
+          var message_content = Ben_way_to_get_element('message_content').value;
+
+          formdata.append('user_id', user_id);
+          formdata.append('message_content', message_content);
+
+          ajax1.open('POST', 'teacher_data/send_student_message.php'); //third argument can be true or false which is optional
+          ajax1.send(formdata);
+
+          ajax1.onreadystatechange = function () {
+            Ben_way_to_get_element('profile_complete_message').innerHTML = ajax1.responseText;
 
       };
 }

@@ -146,7 +146,7 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
                                         <i class="fas fa-file-text"></i>Test</a>
                                 </li>
                                 <li>
-                                    <a href="form.html">
+                                    <a href="index.php?remarks">
                                         <i class="fa fa-tasks"></i>Remarks</a>
                                 </li>
                             </ul>
@@ -301,7 +301,7 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
                                             <i class="fas fa-file-text"></i>Test</a>
                                     </li>
                                     <li>
-                                        <a href="form.html">
+                                        <a href="index.php?remarks">
                                             <i class="fa fa-tasks"></i>Remarks</a>
                                     </li>
                                     </ul>
@@ -384,9 +384,14 @@ if(isset($_SESSION['school_student_twis_data_2020']) == false){
             include("create_favorite.php");
         }
 
-         elseif(isset($_GET['']))
+         elseif(isset($_GET['remarks']))
         {           
-            include("");
+            include("remarks.php");
+        }
+
+         elseif(isset($_GET['send_remarks']))
+        {           
+            include("send_remarks.php");
         }
 
          else
