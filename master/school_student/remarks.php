@@ -10,7 +10,7 @@
 	                            </div>
 	                        </div>
 	                        <span class="nick">
-	                            <a href="#">TWIS Mentor teacher </a>
+	                            <a href="#">TWIS Mentor Teacher </a>
 	                        </span>
 	                    </div>
 	                </div>
